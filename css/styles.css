@@ -646,7 +646,8 @@ a {
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
   transform: translateY(100%);
-  transition: transform var(--transition);
+  transition: transform var(--transition),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .item:hover .item-box::before,
 .item:focus .item-box::before {
@@ -660,7 +661,10 @@ a {
   bottom: 63px;
   width: 322px;
   transform: translateY(100%);
-  transition: transform var(--transition);
+  transition: transform var(--transition),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
